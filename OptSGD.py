@@ -965,10 +965,10 @@ def StochAdaMax(dfunc,w,X,y,Nlearn,args,eta=1e-2,beta1=1e-2,beta2=1e-2,tol=1e-6,
 					grad=dfunc(w0,X[r_sp,:],y[r_sp],args)
 					
 					m=beta1*m+(1.-beta1)*grad
-					u=np.max(beta2*u,np.abs(grad))
+					u=np.maximum(beta2*u,np.abs(grad))
 					mhat=m/(1.-beta1**ite)
 		
-					w=w0-eta*mhat/u
+					w=w0-eta*mhat/(u+1e-16)
 					err=np.linalg.norm(w-w0)
 
 					if err<tol and ep>1:
@@ -999,10 +999,10 @@ def StochAdaMax(dfunc,w,X,y,Nlearn,args,eta=1e-2,beta1=1e-2,beta2=1e-2,tol=1e-6,
 					grad=dfunc(w0,X[idData,:],y[idData],args)/float(nn)
 
 					m=beta1*m+(1.-beta1)*grad
-                                        u=np.max(beta2*u,np.abs(grad))
+                                        u=np.maximum(beta2*u,np.abs(grad))
                                         mhat=m/(1.-beta1**ite)
 
-                                        w=w0-eta*mhat/u
+                                        w=w0-eta*mhat/(u+1e-16)
                                 	err=np.linalg.norm(w-w0)
 
 					if err<tol and ep>1:
@@ -1032,10 +1032,10 @@ def StochAdaMax(dfunc,w,X,y,Nlearn,args,eta=1e-2,beta1=1e-2,beta2=1e-2,tol=1e-6,
 					grad=dfunc(w0,X[r_sp,:],y[r_sp],*args)
 
 					m=beta1*m+(1.-beta1)*grad
-                                        u=np.max(beta2*u,np.abs(grad))
+                                        u=np.maximum(beta2*u,np.abs(grad))
                                         mhat=m/(1.-beta1**ite)
 
-                                        w=w0-eta*mhat/u
+                                        w=w0-eta*mhat/(u+1e-16)
 					err=np.linalg.norm(w-w0)
 
 					if err<tol and ep>1:
@@ -1065,10 +1065,10 @@ def StochAdaMax(dfunc,w,X,y,Nlearn,args,eta=1e-2,beta1=1e-2,beta2=1e-2,tol=1e-6,
 					grad=dfunc(w0,X[idData,:],y[idaDta],*args)/float(nn)
 
 					m=beta1*m+(1.-beta1)*grad
-                                        u=np.max(beta2*u,np.abs(grad))
+                                        u=np.maximum(beta2*u,np.abs(grad))
                                         mhat=m/(1.-beta1**ite)
 
-                                        w=w0-eta*mhat/u
+                                        w=w0-eta*mhat/(u+1e-16)
                                 	err=np.linalg.norm(w-w0)
 
 					if err<tol and ep>1:
