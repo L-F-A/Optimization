@@ -9,6 +9,6 @@ Some of the stochastic methods are Python translation of the Matlab codes of Mik
 
 https://github.com/mp4096/adawhatever
 
-The first and second order methods are not better or more efficient than thos provided in minimize() from SciPy, but it is always good to implement stuff just to understand better the methods. Not all the functions have been fully tested yet (second order). Work in progress.
+The first and second order methods are not better or more efficient than those provided in minimize() from SciPy, but it is always good to implement stuff just to understand better the methods. Not all the functions have been fully tested yet (second order). Work in progress.
 
 
