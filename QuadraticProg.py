@@ -14,7 +14,7 @@ def quadprog(H, f, Aeq=None, beq=None, Aineq=None, bineq=None, lb=None, ub=None,
 ##########################################################################################################################
 #        Matlab style quadratic programming using cvxopt with equality, inequality and lower and upper bounds.           #
 #                                                                                                                        #
-#             I modified the code from https://gist.github.com/garydoranjr/1878742 to fit what I wanted                  #
+#             I modified slightly the code from https://gist.github.com/garydoranjr/1878742 to fit what I wanted                  #
 #                                                                                                                        #
 #                     Louis-Francois Arsenault, Columbia University la2518@columbia.edu (2013-2017)                      #
 ##########################################################################################################################
