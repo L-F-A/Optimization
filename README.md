@@ -5,7 +5,7 @@ The first and second order methods are direct implementations from the algorithm
 
 http://ipvs.informatik.uni-stuttgart.de/mlr/marc/teaching/13-Optimization/
 
-Some of the stochastic methods are Python translation of the Matlab codes of Mikhail Pak in
+Some of the stochastic methods are Python literal translation of the Matlab codes of Mikhail Pak in
 
 https://github.com/mp4096/adawhatever
 
